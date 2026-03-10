@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshay Pillalamarri — Resume</title>
+  <style>
+    /* ── Screen styles ── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11pt;
+      color: #111;
+      background: #f4f4f4;
+      line-height: 1.45;
+    }
+
+    .page-wrapper {
+      max-width: 820px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 44px 52px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+
+    /* Download / print bar */
+    .print-bar {
+      text-align: center;
+      padding: 12px 0 24px;
+    }
+    .print-bar p {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e3a8a;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-print:hover { background: #1e40af; }
+
+    /* ── Header ── */
+    .resume-header { border-bottom: 2px solid #1e3a8a; padding-bottom: 14px; margin-bottom: 18px; }
+    .resume-name   { font-size: 24pt; font-weight: 700; color: #1e3a8a; letter-spacing: 0.01em; }
+    .resume-title  { font-size: 13pt; color: #374151; font-weight: 600; margin-top: 2px; }
+    .resume-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 22px;
+      margin-top: 8px;
+      font-size: 10pt;
+      color: #374151;
+    }
+    .resume-contact span { white-space: nowrap; }
+    .resume-contact a { color: #1e3a8a; text-decoration: none; }
+
+    /* ── Sections ── */
+    .section { margin-bottom: 18px; }
+    .section-heading {
+      font-size: 11.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #1e3a8a;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* Summary */
+    .summary-text { font-size: 10.5pt; color: #222; line-height: 1.55; }
+
+    /* Experience & Education entries */
+    .entry { margin-bottom: 14px; }
+    .entry-header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .entry-title   { font-size: 11pt; font-weight: 700; color: #111; }
+    .entry-dates   { font-size: 10pt; color: #555; white-space: nowrap; flex-shrink: 0; }
+    .entry-company { font-size: 10.5pt; color: #374151; margin: 2px 0 6px; font-style: italic; }
+
+    .entry ul {
+      padding-left: 18px;
+      margin-top: 4px;
+    }
+    .entry ul li {
+      font-size: 10.5pt;
+      color: #222;
+      margin-bottom: 3px;
+      line-height: 1.5;
+    }
+
+    /* Skills */
+    .skills-table { width: 100%; border-collapse: collapse; }
+    .skills-table td {
+      vertical-align: top;
+      padding: 4px 8px 4px 0;
+      font-size: 10.5pt;
+      color: #222;
+      width: 50%;
+    }
+    .skill-category { font-weight: 700; color: #1e3a8a; white-space: nowrap; padding-right: 10px; }
+
+    /* Projects */
+    .project-entry { margin-bottom: 10px; }
+    .project-title { font-size: 10.5pt; font-weight: 700; color: #111; }
+    .project-stack { font-size: 10pt; color: #374151; font-style: italic; }
+    .project-desc  { font-size: 10.5pt; color: #222; margin-top: 2px; }
+
+    /* Certifications */
+    .cert-list { padding-left: 18px; }
+    .cert-list li { font-size: 10.5pt; color: #222; margin-bottom: 4px; line-height: 1.5; }
+
+    /* ── Print styles ── */
+    @media print {
+      body { background: #fff; font-size: 10.5pt; }
+      .page-wrapper { margin: 0; padding: 24px 28px; box-shadow: none; max-width: 100%; }
+      .print-bar { display: none; }
+      .section { page-break-inside: avoid; }
+      a { color: #1e3a8a !important; }
+    }
+
+    @page {
+      margin: 0.6in 0.7in;
+      size: letter;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print/Download bar — hidden when printing -->
+  <div class="print-bar">
+    <p>To save as PDF: click the button below (or press <strong>Ctrl + P</strong> → Save as PDF)</p>
+    <button class="btn-print" onclick="window.print()">⬇ Save / Download as PDF</button>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- ── HEADER ── -->
+    <div class="resume-header">
+      <div class="resume-name">Akshay Pillalamarri</div>
+      <div class="resume-title">Software Developer &amp; SDET | AI Automation Engineer</div>
+      <div class="resume-contact">
+        <span>📧 <a href="mailto:pillalamarriakshay01@gmail.com">pillalamarriakshay01@gmail.com</a></span>
+        <span>📞 +1 (913) 498-3888</span>
+        <span>📍 United States</span>
+        <span>🔗 <a href="https://github.com/akshaypillalamarri">github.com/akshaypillalamarri</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/akshay-pillalamarri-4b9a23211/">linkedin.com/in/akshay-pillalamarri</a></span>
+      </div>
+    </div>
+
+    <!-- ── PROFESSIONAL SUMMARY ── -->
+    <div class="section">
+      <div class="section-heading">Professional Summary</div>
+      <p class="summary-text">
+        Results-driven Software Developer and SDET with 2+ years of experience designing and delivering
+        scalable applications, automated testing frameworks, and AI-powered systems. Proficient in Python,
+        Java, JavaScript, and Salesforce with hands-on expertise in Selenium, Jenkins, and Azure DevOps.
+        Adept at building multi-agent AI workflows using LangGraph and CrewAI, and delivering no-code
+        automation solutions with Make.com and Zapier. Strong communicator with a proven record of
+        cross-functional collaboration and agile execution.
+      </p>
+    </div>
+
+    <!-- ── TECHNICAL SKILLS ── -->
+    <div class="section">
+      <div class="section-heading">Technical Skills</div>
+      <table class="skills-table">
+        <tr>
+          <td class="skill-category">Languages</td>
+          <td>Python, Java, JavaScript (ES6+), TypeScript, HTML5, CSS3</td>
+        </tr>
+        <tr>
+          <td class="skill-category">Testing &amp; QA</td>
+          <td>Selenium WebDriver, TestNG, Tosca AE1, Tosca AS2, Apache POI, JUnit, Postman</td>
+        </tr>
+        <tr>
+          <td class="skill-category">AI / ML</td>
+          <td>Gemini API, LangGraph, CrewAI, OpenCV, CNNs, LLaMA-3, Chatbase, OpenRouter</td>
+        </tr>
+        <tr>
+          <td class="skill-category">DevOps &amp; Tools</td>
+          <td>Jenkins, Azure DevOps, GitHub, TFS, REST APIs, CI/CD Pipelines</td>
+        </tr>
+        <tr>
+          <td class="skill-category">Platforms</td>
+          <td>Salesforce (CRM), Azure, Node.js, Git</td>
+        </tr>
+        <tr>
+          <td class="skill-category">No-Code / Automation</td>
+          <td>Make.com, Zapier, Airtable, Softr, Glide, Chatbase</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- ── WORK EXPERIENCE ── -->
+    <div class="section">
+      <div class="section-heading">Work Experience</div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Junior Software Developer</span>
+          <span class="entry-dates">Nov 2025 – Present</span>
+        </div>
+        <div class="entry-company">Cloud Nexus Solutions — Folsom, CA</div>
+        <ul>
+          <li>Develop and maintain Salesforce-based enterprise applications using custom HTML, CSS, and JavaScript components.</li>
+          <li>Design and integrate RESTful APIs for seamless data exchange between internal systems and third-party services.</li>
+          <li>Manage build and release processes across System Test, UAT, and Production environments via Azure DevOps and TFS.</li>
+          <li>Collaborate in agile sprint cycles including planning, code reviews, and retrospectives to deliver high-quality releases.</li>
+          <li>Build automated test scripts to validate functionality and maintain product quality across release cycles.</li>
+          <li>Generate stakeholder reports and dashboards to support data-driven decision-making.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── PROJECTS ── -->
+    <div class="section">
+      <div class="section-heading">Key Projects</div>
+
+      <div class="project-entry">
+        <span class="project-title">AI-Powered Hedge Fund</span>
+        <span class="project-stack"> — Python, Gemini API, LangGraph, CrewAI</span>
+        <div class="project-desc">Built a multi-agent AI system that performs real-time stock analysis, risk assessment, and generates trade recommendations using LangGraph orchestration and CrewAI agent roles.</div>
+      </div>
+
+      <div class="project-entry">
+        <span class="project-title">Automated CI/CD Test Framework</span>
+        <span class="project-stack"> — Java, Selenium WebDriver, Jenkins, TestNG, Apache POI</span>
+        <div class="project-desc">Designed and implemented a data-driven test automation framework with CI/CD integration, reducing regression test execution time by 60% and improving release confidence.</div>
+      </div>
+
+      <div class="project-entry">
+        <span class="project-title">Autocolorization of Black &amp; White Images</span>
+        <span class="project-stack"> — Python, TensorFlow, CNNs, OpenCV</span>
+        <div class="project-desc">Trained a convolutional neural network to automatically colorize grayscale images, achieving high visual fidelity using encoder-decoder architecture with skip connections.</div>
+      </div>
+
+      <div class="project-entry">
+        <span class="project-title">Intelligent Notification System</span>
+        <span class="project-stack"> — Node.js, LLaMA-3, Telegram API</span>
+        <div class="project-desc">Developed an AI-driven notification pipeline that filters, summarizes, and routes alerts intelligently using a locally-hosted LLaMA-3 model integrated with Telegram delivery.</div>
+      </div>
+
+      <div class="project-entry">
+        <span class="project-title">Virtual Mouse via Gesture Recognition</span>
+        <span class="project-stack"> — Python, OpenCV, MediaPipe</span>
+        <div class="project-desc">Engineered a touchless mouse controller that interprets hand gestures in real time using computer vision, enabling full cursor control without physical hardware.</div>
+      </div>
+
+      <div class="project-entry">
+        <span class="project-title">Q&amp;A PDF Chatbot</span>
+        <span class="project-stack"> — No-Code, Chatbase, OpenAI</span>
+        <div class="project-desc">Built a document-aware chatbot that answers questions from uploaded PDFs using RAG, deployed as a no-code solution with Chatbase for instant document Q&amp;A.</div>
+      </div>
+    </div>
+
+    <!-- ── EDUCATION ── -->
+    <div class="section">
+      <div class="section-heading">Education</div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Master of Science — Computer Science</span>
+          <span class="entry-dates">Aug 2023 – May 2025</span>
+        </div>
+        <div class="entry-company">University of Central Missouri — Warrensburg, MO</div>
+        <ul>
+          <li>Focused on Artificial Intelligence, Machine Learning, and Software Engineering.</li>
+          <li>Completed research projects in computer vision, NLP, and intelligent automation systems.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Bachelor of Engineering — Computer Science</span>
+          <span class="entry-dates">Jul 2019 – May 2023</span>
+        </div>
+        <div class="entry-company">Gokaraju Rangaraju Institute of Engineering &amp; Technology — India</div>
+      </div>
+    </div>
+
+    <!-- ── CERTIFICATIONS ── -->
+    <div class="section">
+      <div class="section-heading">Certifications</div>
+      <ul class="cert-list">
+        <li>Selenium WebDriver with Java — Basics to Advanced + Frameworks (Udemy)</li>
+        <li>Tricentis Tosca Deep Dive — Automating Beyond Web (AE1)</li>
+        <li>Tricentis Tosca Fundamentals — Test Data Optimization (AS2)</li>
+        <li>Data Science for Engineers (NPTEL)</li>
+        <li>Data Analytics with Python (NPTEL)</li>
+      </ul>
+    </div>
+
+  </div><!-- end .page-wrapper -->
+
+</body>
+</html>
